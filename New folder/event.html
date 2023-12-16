@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor's Appointment Form</title>
+</head>
+<body>
+
+    <label for="patientDetails"><h1>Book Appointment</h1></label>
+    <p>Patient Details</p><hr>
+    
+    <form id="patientDetails" onsubmit="submitForm()">
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" ><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" ><br><br>
+        
+        <label for="date">Date of Appointment:</label>
+        <input type="date" id="date" name="date" ><br><br>
+        
+        <label for="time">Time of Appointment:</label>
+        <input type="time" id="time" name="time" ><br><br>
+        
+        <label>
+            <button type="submit">Submit</button>
+        </label>
+        
+        <label>
+            <button type="reset">Reset</button>
+        </label>
+    </form>
+
+    <script>
+        function submitForm() {
+            // Get the form values
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var date = document.getElementById("date").value;
+            var time = document.getElementById("time").value;
+            
+            // Print the details to the console
+            console.log("Patient Details:");
+            console.log("Name: " + name);
+            console.log("Email: " + email);
+            console.log("Phone Number: " + phone);
+            console.log("Date of Appointment: " + date);
+            console.log("Time of Appointment: " + time);
+        }
+    </script>
+
+</body>
+</html>

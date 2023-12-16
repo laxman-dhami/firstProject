@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+  <style>
+    /* Add some basic styling for better visibility */
+    ul {
+      list-style-type: none;
+    }
+    li {
+      padding: 10px;
+      margin: 5px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <ul id="myList">
+    <li>HELLO</li>
+    <li>World</li>
+    <!-- Add more <li> elements if needed -->
+  </ul>
+
+  <script>
+    // Get the first and second <li> elements
+    var myList = document.getElementById('myList');
+    var firstLi = myList.getElementsByTagName('li')[0];
+    var secondLi = myList.getElementsByTagName('li')[1];
+
+    // Make the first <li> green
+    firstLi.style.color = 'green';
+
+    // Make the second <li> yellow
+    secondLi.style.color = 'yellow';
+  </script>
+
+</body>
+</html>
+
