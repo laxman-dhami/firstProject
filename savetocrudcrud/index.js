@@ -14,7 +14,7 @@ function saveToCloud(event) {
         email: email,
         tel: tel
     };
-   axios.post('https://crudcrud.com/api/e6ed165021ef4d619c52b3c4997dd555//appointmentdata',obj)
+   axios.post('https://crudcrud.com/api/91a5b00b4bf84e91bf92df051baebd7a/appointmentData',obj)
    .then(res=>{
     showOnScreen(res.data)
     
