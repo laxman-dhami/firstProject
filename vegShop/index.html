@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="addToShop(event)">
+    <label>Name:</label>
+    <input type="text" name="name" id="name"><br><br>
+    <label>Price:</label>
+    <input type="number" name="Price" id="Price"><br><br>
+    <label>Quantity</label>
+    <input type="number" name="Quantity" id="Quantity"><br><br>
+    
+    <button type="submit" >Add to Shop</button>
+   </form> 
+   <ul id="listItem"></ul>
+   <p>Total Count: <span id="totalCount">0</span></p>
+   
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.min.js"></script>
+    <script src="index.js"></script>
+    
+</body>
+</html>
+
+    
+
+   
