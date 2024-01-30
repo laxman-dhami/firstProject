@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form onsubmit="savetoCrudcrud(event)">
+    <label>Name:</label>
+    <input type="text" name="name" id="name"><br><br>
+    <label>Email:</label>
+    <input type="email" name="email" id="email"><br><br>
+    <label>PhoneNumber:</label>
+    <input type="tel" name="tel" id="tel"><br><br>
+    <button type="submit">Submit</button>
+  </form>
+  <ul id="listofusers"></ul>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
