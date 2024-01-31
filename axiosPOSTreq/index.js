@@ -9,7 +9,7 @@ function savetoCrudcrud(event){
     Email,
     Phone
   }
-  axios.post("https://crudcrud.com/api/7bbb44ec07ae44fb9a641e9b17602d72/appointmentdata",obj)
+  axios.post("https://crudcrud.com/api/3956336a157941bab2f6dd2924c00c34/appointmentdata",obj)
   .then((res)=>{
     showOnScreen(res.data)
   })
@@ -21,7 +21,7 @@ function savetoCrudcrud(event){
 
 
 window.addEventListener("DOMContentLoaded",()=>{
-  axios.get('https://crudcrud.com/api/7bbb44ec07ae44fb9a641e9b17602d72/appointmentdata')
+  axios.get('https://crudcrud.com/api/3956336a157941bab2f6dd2924c00c34/appointmentdata')
   .then((res)=>{
     for(let i=0;i<res.data.length;i++){
       showOnScreen(res.data[i])
@@ -38,12 +38,21 @@ window.addEventListener("DOMContentLoaded",()=>{
 
 function showOnScreen(obj) {
   const parentEle = document.getElementById('listofusers');
-  parentEle.innerHTML = parentEle.innerHTML + `<li id="${obj._id}">${obj.Name}- ${obj.Email}-${obj.Phone} <button onclick="deleteUser('${obj._id}')">Delete</button> <button onclick="editUser('${obj._id}')">Edit</button></li>`;
+  parentEle.innerHTML = parentEle.innerHTML + `<li id="${obj._id}">${obj.Name} - ${obj.Email} - ${obj.Phone} 
+    <button onclick="deleteUser('${obj._id}')">Delete</button>
+    <button onclick="editUser('${obj.Email}','${obj.Name}','${obj.Phone}','${obj._id}')">Edit</button></li>`;
+}
+
+function editUser(email,name,tel,objId){
+document.getElementById('email').value=email;
+document.getElementById('name').value=name;
+document.getElementById('tel').value=tel;
+deleteUser(objId);
 }
 
 
 function deleteUser(objId){
-axios.delete(`https://crudcrud.com/api/7bbb44ec07ae44fb9a641e9b17602d72/appointmentdata/${objId}`)
+axios.delete(`https://crudcrud.com/api/3956336a157941bab2f6dd2924c00c34/appointmentdata/${objId}`)
 .then((res)=>{
   removeUser(objId)
 })
@@ -59,3 +68,9 @@ function removeUser(objId){
   }
 }
 }
+
+
+
+
+
+
