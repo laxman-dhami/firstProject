@@ -26,3 +26,12 @@ function savetocrudcrud(event){
 
 }
 
+addEventListener('DOMContentLoaded',()=>{
+    axios.get('https://crudcrud.com/api/d3fd21bbb77348a38ade3a2c014876b8/appointmentdata')
+    .then((res)=>{
+      for(let i=0;i<res.data.length;i++){
+         showOnscreen(res.data[i])
+      }
+    })
+  })
+
