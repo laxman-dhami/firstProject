@@ -35,3 +35,20 @@ addEventListener('DOMContentLoaded',()=>{
     })
   })
 
+  function deleteUser(objId){
+   axios.delete(`https://crudcrud.com/api/d3fd21bbb77348a38ade3a2c014876b8/appointmentdata/${objId}`)
+   .then((res)=>{
+     removeUser(objId)
+   })
+   .catch((err)=>{
+       console.log(err)
+   })
+}
+function removeUser(objId){
+   const parentNode=document.getElementById('listofusers')
+   const childnodetodelete=document.getElementById(objId)
+   if(childnodetodelete){
+       parentNode.removeChild(childnodetodelete)
+   }
+}
+
