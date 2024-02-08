@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form onsubmit="storeTotal(event)">
+  <label >Product Name</label>
+  <input type="text" name="name" id="name"><br><br>
+  <label>Selling Price</label>
+  <input type="number" name="price" id="price"><br><br>
+  <label>Choose a Catogary</label>
+  <select name="choode" id="choose">
+  <option value="food">Food</option>
+  <option value="electronics">Electronics</option>
+  <option value="skin">Skincare</option><br><br>
+</select>
+  <button type="submit">Add Product</button>
+
+
+</form>
+<h1>Products</h1>
+<ul id="listofitems"></ul>
+<h3 id="total">Total: Rs 0.00</h3>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
+
